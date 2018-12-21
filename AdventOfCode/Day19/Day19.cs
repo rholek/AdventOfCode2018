@@ -76,13 +76,13 @@ namespace AdventOfCode
         }
     }
 
-    public class Day18Machine
+    public class Day19Machine
     {
         readonly long[] register;
 
         public long[] ReadonlyRegister => register.ToArray();
 
-        public Day18Machine(long[] registerInitialState)
+        public Day19Machine(long[] registerInitialState)
         {
             register = registerInitialState.ToArray();
         }
@@ -125,7 +125,7 @@ namespace AdventOfCode
                 case Day16Opcode.seti:
                     register[C] = A;
                     break;
-                case Day16Opcode.grir:
+                case Day16Opcode.gtir:
                     register[C] = A > register[B] ? 1 : 0;
                     break;
                 case Day16Opcode.gtri:

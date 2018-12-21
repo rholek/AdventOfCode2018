@@ -135,7 +135,7 @@ namespace AdventOfCode
                 case Day16Opcode.seti:
                     register[C] = A;
                     break;
-                case Day16Opcode.grir:
+                case Day16Opcode.gtir:
                     register[C] = A > register[B] ? 1 : 0;
                     break;
                 case Day16Opcode.gtri:
@@ -169,7 +169,7 @@ namespace AdventOfCode
         bori,
         setr,
         seti,
-        grir,
+        gtir,
         gtri,
         gtrr,
         eqir,
