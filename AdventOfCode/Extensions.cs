@@ -25,6 +25,12 @@ namespace AdventOfCode
             return ordered.First().Key;
         }
 
+        static readonly Random random = new Random();
+        public static T GetRandom<T>(this List<T> collection)
+        {
+           return collection[random.Next(collection.Count)];
+        }
+
         public static void AddUnique<T>(this ICollection<T> col, T value)
         {
             if (!col.Contains(value))
